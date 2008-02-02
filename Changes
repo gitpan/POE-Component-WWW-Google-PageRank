@@ -1,5 +1,8 @@
 Revision history for Perl extension POE::Component::WWW::Google::PageRank.
 
+0.01  Sat Feb  2 12:23:00 2008
+	- fixed a bug
+
 0.01  Sat Jan 12 22:39:02 2008
 	- original version; created by h2xs 1.23 with options
 		-X -n POE::Component::WWW::Google::PageRank -v 0.01
