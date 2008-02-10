@@ -4,7 +4,7 @@ use 5.008008;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use POE qw( Wheel::Run  Filter::Reference  Filter::Line );
 use Carp;
@@ -22,13 +22,6 @@ sub spawn {
     
     delete $params{options}
         unless ref $params{options} eq 'HASH';
-
-    eval {
-        use WWW::Google::PageRank;
-    };
-    die "Failed to load WWW::Google::PageRank, "
-            . "check if it's installed ($@)\n"
-        if $@;
 
     my $self = bless \%params, $package;
     
@@ -412,7 +405,8 @@ response should be sent to, defaults to sending session.
 
     { options => { timeout => 10 } }
 
-B<Optional>. The value must be a hashref and these options will go directly to
+B<Optional>. The value must be a hashref and these options will go
+directly to
 L<WWW::Google::PageRank> C<new()> method. See documentation for
 L<WWW::Google::PageRank> for more information.
 
@@ -483,32 +477,57 @@ when we were fetching for page rank.
 
     print "$result->{_name}, the answer is $result->{out}\n";
 
-Any arguments beginning with C<_> (underscore) passed into the C<calc>
+Any arguments beginning with C<_> (underscore) passed into the C<rank>
 event/method will be present intact in the result.
 
 =head1 PREREQUISITES
 
 Needs L<POE> and L<WWW::Google::PageRank>
 
-=head1 BUGS
-
-None that I know of.
-
-=head1 SEE ALSO
-
-L<POE> L<WWW::Google::PageRank>
-
 =head1 AUTHOR
 
-Zoffix Znet, E<lt>zoffix@cpan.orgE<gt>
+Zoffix Znet, C<< <zoffix at cpan.org> >>
+(L<http://zoffix.com>, L<http://haslayout.net>)
 
-=head1 COPYRIGHT AND LICENSE
+=head1 BUGS
 
-Copyright (C) 2008 by Zoffix Znet
+Please report any bugs or feature requests to C<bug-poe-component-www-google-pagerank at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=POE-Component-WWW-Google-PageRank>.  I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.8 or,
-at your option, any later version of Perl 5 you may have available.
+=head1 SUPPORT
 
+You can find documentation for this module with the perldoc command.
+
+    perldoc POE::Component::WWW::Google::PageRank
+
+You can also look for information at:
+
+=over 4
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=POE-Component-WWW-Google-PageRank>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/POE-Component-WWW-Google-PageRank>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/POE-Component-WWW-Google-PageRank>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/POE-Component-WWW-Google-PageRank>
+
+=back
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2008 Zoffix Znet, all rights reserved.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
 
 =cut

@@ -1,7 +1,12 @@
+Build.PL
 Changes
-Makefile.PL
 MANIFEST
 README
-t/POE-Component-WWW-Google-PageRank.t
 lib/POE/Component/WWW/Google/PageRank.pm
-META.yml                                 Module meta-data (added by MakeMaker)
+examples/rank.pl
+t/kwalitee.t
+t/00-load.t
+t/pod-coverage.t
+t/pod.t
+Makefile.PL
+META.yml

@@ -1,17 +1,17 @@
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl POE-Component-WWW-Google-Calculator.t'
+#!perl
 
-#########################
-
-# change 'tests => 1' to 'tests => last_test_to_print';
-
-use lib 'lib';
-use Test::More tests => 13;
+use Test::More tests => 17;
 BEGIN {
     use_ok('POE');
+    use_ok('POE::Filter::Reference');
+    use_ok('POE::Filter::Line');
+    use_ok('POE::Wheel::Run');
     use_ok('WWW::Google::PageRank');
+    use_ok('Carp');
     use_ok('POE::Component::WWW::Google::PageRank');
 };
+
+diag( "Testing POE::Component::WWW::Google::PageRank $POE::Component::WWW::Google::PageRank::VERSION, Perl $], $^X" );
 
 use POE qw(Component::WWW::Google::PageRank);
 
@@ -54,14 +54,14 @@ sub _start {
     );
     
     print "\nNow sending a request with 'session' parameter\n";
-    eval { $poco->rank(
+    $poco->rank(
         {
             page  => 'http://yahoo.com',
             event => 'got_rank',
             session => 'test_session',
             _user   => 'Joe Shmoe',
         }
-    ); };
+    );
 
 }
 
