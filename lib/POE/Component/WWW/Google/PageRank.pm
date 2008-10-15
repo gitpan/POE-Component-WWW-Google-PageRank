@@ -4,7 +4,7 @@ use 5.008008;
 use strict;
 use warnings;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use POE qw( Wheel::Run  Filter::Reference  Filter::Line );
 use Carp;

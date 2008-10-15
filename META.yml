@@ -1,6 +1,6 @@
 ---
 name: POE-Component-WWW-Google-PageRank
-version: 0.03
+version: 0.04
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
 abstract: |-
@@ -21,7 +21,7 @@ build_requires:
 provides:
   POE::Component::WWW::Google::PageRank:
     file: lib/POE/Component/WWW/Google/PageRank.pm
-    version: 0.03
+    version: 0.04
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

@@ -2,19 +2,19 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
+          'PL_FILES' => {},
+          'INSTALLDIRS' => 'site',
           'NAME' => 'POE::Component::WWW::Google::PageRank',
+          'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/POE/Component/WWW/Google/PageRank.pm',
           'PREREQ_PM' => {
-                           'Carp' => '1.04',
-                           'POE' => '0.9999',
-                           'POE::Filter::Line' => '1.192',
-                           'POE::Filter::Reference' => '1.2187',
+                           'Test::More' => 0,
                            'POE::Wheel::Run' => '1.2179',
-                           'Test::More' => '0',
-                           'WWW::Google::PageRank' => '0.14'
-                         },
-          'INSTALLDIRS' => 'site',
-          'EXE_FILES' => [],
-          'PL_FILES' => {}
+                           'WWW::Google::PageRank' => '0.14',
+                           'POE::Filter::Reference' => '1.2187',
+                           'POE::Filter::Line' => '1.192',
+                           'POE' => '0.9999',
+                           'Carp' => '1.04'
+                         }
         )
 ;
