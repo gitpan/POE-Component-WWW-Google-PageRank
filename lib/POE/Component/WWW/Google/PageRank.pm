@@ -1,12 +1,11 @@
 package POE::Component::WWW::Google::PageRank;
 
-use 5.008008;
 use strict;
 use warnings;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
-use POE qw( Wheel::Run  Filter::Reference  Filter::Line );
+use POE (qw( Wheel::Run  Filter::Reference  Filter::Line ));
 use Carp;
 use WWW::Google::PageRank;
 
@@ -247,6 +246,8 @@ sub _rank_wheel {
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

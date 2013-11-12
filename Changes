@@ -1,14 +1,17 @@
 Revision history for POE-Component-WWW-Google-PageRank
 
-0.04  October 15, 2008
-        Tried to fix what seems to be a broken test suite
+0.05    2013-11-11
+        - Minor fixes to comply with specs and Kwalitee game
 
-0.03  Sun Feb 10 9:37:00  2008
-    - fixed some distro issues, added examples/rank.pl
-        fixed documentation discrepancy.
+0.04    2008-10-15
+        - Tried to fix what seems to be a broken test suite
 
-0.02  Sat Feb  2 12:23:00 2008
-    - fixed a bug
+0.03    2008-02-10
+        - fixed some distro issues, added examples/rank.pl
+        - fixed documentation discrepancy
 
-0.01  Sat Jan 12 22:39:02 2008
-        First version, released on an unsuspecting world.
+0.02    2008-02-02
+        - fixed a bug
+
+0.01    2008-01-12
+        - First version, released on an unsuspecting world.

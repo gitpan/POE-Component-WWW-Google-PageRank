@@ -1,14 +1,22 @@
 ---
-name: POE-Component-WWW-Google-PageRank
-version: 0.04
+abstract: 'A non-blocking wrapper for'
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
-abstract: |-
-  A non-blocking wrapper for
-  L<WWW::Google::PageRank>
+build_requires:
+  Test::More: 0
+configure_requires:
+  Module::Build: 0
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132830'
 license: perl
-resources:
-  license: http://dev.perl.org/licenses/
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: POE-Component-WWW-Google-PageRank
+provides:
+  POE::Component::WWW::Google::PageRank:
+    file: lib/POE/Component/WWW/Google/PageRank.pm
+    version: 0.05
 requires:
   Carp: 1.04
   POE: 0.9999
@@ -16,13 +24,7 @@ requires:
   POE::Filter::Reference: 1.2187
   POE::Wheel::Run: 1.2179
   WWW::Google::PageRank: 0.14
-build_requires:
-  Test::More: 0
-provides:
-  POE::Component::WWW::Google::PageRank:
-    file: lib/POE/Component/WWW/Google/PageRank.pm
-    version: 0.04
-generated_by: Module::Build version 0.2808
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+  perl: 5.006
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.05

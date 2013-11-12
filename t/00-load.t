@@ -82,7 +82,7 @@ sub rank_method_result {
     }
     else {
         ok(
-            $result->{rank} == 10,
+            $result->{rank} == 9,
             "(method call) Did we get correct result? "
                 . "(expecting: '10' "
                 . "got '$result->{rank}')"
@@ -117,7 +117,7 @@ sub rank_result {
     }
     else {
         ok(
-            $result->{rank} == 10,
+            $result->{rank} == 9,
             "(event call) Did we get correct result? "
                 . "(expecting: '10' "
                 . "got '$result->{rank}')"

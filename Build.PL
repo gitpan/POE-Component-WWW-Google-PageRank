@@ -17,7 +17,9 @@ my $builder = Module::Build->new(
         'POE::Wheel::Run'        => 1.2179,
         'WWW::Google::PageRank'  => 0.14,
         'Carp'                   => 1.04,
+        'perl' => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'POE-Component-WWW-Google-PageRank-*' ],
     create_makefile_pl => 'traditional',
 );

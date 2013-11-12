@@ -6,7 +6,7 @@ use warnings;
 die "Usage: perl rank.pl <page_to_rank>\n"
     unless @ARGV;
 
-use lib '../lib';
+use lib qw(../lib  lib);
 use POE qw(Component::WWW::Google::PageRank);
 
 my $Page_to_rank = shift;
